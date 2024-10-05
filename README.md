@@ -1,4 +1,3 @@
-@ -1,95 +0,0 @@
 ### README.md
 
 # Exoplanet Sound Simulator
