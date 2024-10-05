@@ -124,22 +124,22 @@ def run_simulation():
 
         # Load and resample sounds based on probabilities, and mix them together
         try:
-            if rain_prob > 0:
+            if rain_prob > 0.5:
                 rain_sound = load_and_resample('spaceappssounds/rain.mp3')
                 if rain_sound:
                     combined_sound = combined_sound.overlay(rain_sound)
 
-            if thunderstorm_prob > 0:
+            if thunderstorm_prob > 0.5:
                 thunderstorm_sound = load_and_resample('spaceappssounds/thunder.mp3')
                 if thunderstorm_sound:
                     combined_sound = combined_sound.overlay(thunderstorm_sound)
 
-            if ice_cracking_prob > 0:
+            if ice_cracking_prob > 0.5:
                 ice_sound = load_and_resample('spaceappssounds/ice.mp3')
                 if ice_sound:
                     combined_sound = combined_sound.overlay(ice_sound)
 
-            if ocean_waves_prob > 0:
+            if ocean_waves_prob > 0.5:
                 ocean_sound = load_and_resample('spaceappssounds/ocean.mp3')
                 if ocean_sound:
                     combined_sound = combined_sound.overlay(ocean_sound)
@@ -153,6 +153,8 @@ def run_simulation():
         # Calculate and update speed of sound label
         sound_speed = calculate_speed_of_sound(planet_env.temperature, planet_env.gas_composition)
         speed_label.config(text=f"Calculated Speed of Sound: {sound_speed:.2f} m/s")
+
+        print("rain:" ,rain_prob,"thunder:", thunderstorm_prob,"ice:", ice_cracking_prob,"waves:", ocean_waves_prob)
 
     except ValueError as e:
         messagebox.showerror("Input Error", f"Invalid input: {e}")
@@ -213,7 +215,10 @@ speed_label.grid(row=5, column=0, columnspan=2, padx=10, pady=5)
 run_button = tk.Button(root, text="Run Simulation", command=run_simulation)
 run_button.grid(row=6, column=0, padx=10, pady=10)
 
-stop_button = tk.Button(root, text="Stop Simulation", command=stop_simulation)
-stop_button.grid(row=6, column=1, padx=10, pady=10)
+checkbutton = tk.Checkbutton(root, text="you see a few alien dancing in the distance")
+checkbutton.pack()
+
+#stop_button = tk.Button(root, text="Stop Simulation", command=stop_simulation)
+#stop_button.grid(row=6, column=1, padx=10, pady=10)
 
 root.mainloop()
