@@ -179,46 +179,46 @@ def parse_gas_composition(gas_input):
 
 # Temperature input
 tk.Label(root, text="Temperature (K)").grid(row=0, column=0, padx=10, pady=5)
-temp_entry = tk.Entry(root)
+temp_entry = tk.Entry(root, width=32)
 temp_entry.insert(0, "290")  # Default example values
 temp_entry.grid(row=0, column=1, padx=10, pady=5)
 
 # Pressure input
 tk.Label(root, text="Pressure (Pa)").grid(row=1, column=0, padx=10, pady=5)
-pressure_entry = tk.Entry(root)
+pressure_entry = tk.Entry(root, width=32)
 pressure_entry.insert(0, "101325")  # Default example values
 pressure_entry.grid(row=1, column=1, padx=10, pady=5)
 
 # Gas composition input
 tk.Label(root, text="Gas Composition").grid(row=2, column=0, padx=10, pady=5)
-gas_entry = tk.Entry(root)
+gas_entry = tk.Entry(root, width=32)
 gas_entry.insert(0, "N2:0.78,O2:0.21,CO2:0.01,H2O:0.01")  # Default example values
 gas_entry.grid(row=2, column=1, padx=10, pady=5)
 
 # Wind speed input
 tk.Label(root, text="Wind Speed (m/s)").grid(row=3, column=0, padx=10, pady=5)
-wind_entry = tk.Entry(root)
+wind_entry = tk.Entry(root, width=32)
 wind_entry.insert(0, "15")  # Default example values
 wind_entry.grid(row=3, column=1, padx=10, pady=5)
 
 # Volcanic activity input
 tk.Label(root, text="Volcanic Activity (0 to 1)").grid(row=4, column=0, padx=10, pady=5)
-volcanic_entry = tk.Entry(root)
+volcanic_entry = tk.Entry(root, width=32)
 volcanic_entry.insert(0, "0.5")  # Default example values
 volcanic_entry.grid(row=4, column=1, padx=10, pady=5)
 
 # Speed of sound label
 speed_label = tk.Label(root, text="Calculated Speed of Sound: ")
-speed_label.grid(row=5, column=0, columnspan=2, padx=10, pady=5)
+speed_label.grid(row=8, column=0, columnspan=1, padx=1, pady=5)
 
 # Run and stop buttons
 run_button = tk.Button(root, text="Run Simulation", command=run_simulation)
-run_button.grid(row=6, column=0, padx=10, pady=10)
-
-checkbutton = tk.Checkbutton(root, text="you see a few alien dancing in the distance")
-checkbutton.pack()
+run_button.grid(row=7, column=1, padx=100)
 
 #stop_button = tk.Button(root, text="Stop Simulation", command=stop_simulation)
 #stop_button.grid(row=6, column=1, padx=10, pady=10)
+
+checkbutton = tk.Checkbutton(root, text="you see a few alien dancing in the distance")
+checkbutton.grid(row=6, padx=10)
 
 root.mainloop()
