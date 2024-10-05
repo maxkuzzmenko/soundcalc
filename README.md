@@ -86,10 +86,6 @@ pip install numpy pydub sounddevice
 - **Missing File Error**: Ensure the required MP3 files are available in the `spaceappssounds/` folder.
 - **No Sound Played**: Make sure that probabilities for rain, thunderstorms, ice cracking, or ocean waves are non-zero based on the input parameters.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
 ---
 
 Feel free to modify the settings and experiment with different environmental conditions to generate unique exoplanet soundscapes!
