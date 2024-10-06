@@ -1,5 +1,5 @@
 #! /bin/bash
 
-cd <working_dir>
-source spaceapp-env/bin/activate
-python3 speeofsound.py
+cd /home/soundcalc/soundcalc
+source soundcalc-env/bin/activate
+python3 soundcalc.py
