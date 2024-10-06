@@ -11,7 +11,7 @@ with open("spaceappssounds/rain.mp3", "r") as f:
     print("File is accessible")
 
 # Ensure ffmpeg is configured (update with correct path if needed)
-AudioSegment.converter = "C:/ffmpeg/bin/ffmpeg.exe"  # Update this to the actual ffmpeg path on your system
+#AudioSegment.converter = "C:/ffmpeg/bin/ffmpeg.exe"  # Update this to the actual ffmpeg path on your system
 
 # Define a class to represent an exoplanet's environment
 root = tk.Tk()
@@ -215,8 +215,8 @@ speed_label.grid(row=8, column=0, columnspan=1, padx=1, pady=5)
 run_button = tk.Button(root, text="Run Simulation", command=run_simulation)
 run_button.grid(row=7, column=1, padx=100)
 
-#stop_button = tk.Button(root, text="Stop Simulation", command=stop_simulation)
-#stop_button.grid(row=6, column=1, padx=10, pady=10)
+stop_button = tk.Button(root, text="Stop Simulation", command=stop_simulation)
+stop_button.grid(row=6, column=1, padx=10, pady=10)
 
 checkbutton = tk.Checkbutton(root, text="you see a few alien dancing in the distance")
 checkbutton.grid(row=6, padx=10)
