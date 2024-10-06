@@ -1,5 +1,8 @@
 ### README.md
 
+You can access the vm with all of the required libs installed by this link:https://drive.google.com/file/d/1kFm08z_Jp1s4b_Yys5iNhY82JxJSrENb/view?usp=sharing
+To run the program head to /home/soundcalc and run run.sh file. If you have any issues with that you can just run soundcalc.py from this repository. Please consider doing that if you launched it in the vm, vm might have some stability issues.
+
 # Exoplanet Sound Simulator
 
 This project simulates the soundscape of an exoplanet based on environmental parameters such as temperature, pressure, gas composition, wind speed, and volcanic activity. It generates a wind sound and combines it with other pre-recorded sounds such as rain, thunderstorms, ice cracking, and ocean waves based on calculated probabilities for each environmental condition.
