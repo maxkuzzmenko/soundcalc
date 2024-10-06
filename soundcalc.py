@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-import sounddevice as sd
+from sounddevice import stop
 from pydub import AudioSegment
 from pydub.playback import play
 import os
@@ -161,7 +161,7 @@ def run_simulation():
 
 # Stop the sound playback
 def stop_simulation():
-    sd.stop()
+    stop()
 
 # Function to parse gas composition input
 def parse_gas_composition(gas_input):
