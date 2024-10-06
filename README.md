@@ -33,7 +33,7 @@ pip install numpy pydub sounddevice
 
 ### Additional Requirements
 
-1. **FFmpeg**: The `pydub` library requires FFmpeg to handle MP3 files. You can download it from the [official FFmpeg website](https://ffmpeg.org/download.html). After downloading, make sure to add FFmpeg to your system's PATH or configure it in the script as shown in the code.
+1. **FFmpeg**: The `pydub` library requires FFmpeg to handle MP3 files. You can download it from the [official FFmpeg website](https://ffmpeg.org/download.html). After downloading, make sure to add FFmpeg to your system's PATH or configure it in the script as shown in the code (C:/ffmpeg/bin/ffmpeg.exe).
 
 2. **MP3 Files**: The following audio files should be available in the `spaceappssounds/` directory:
     - `rain.mp3`
